@@ -1,0 +1,34 @@
+Kodlar hem açıklamada hem yorumda 🫡
+
+@echo off
+chcp 65001
+
+echo Bu komut dosyası, sanal bellek ayarlarını yapılandırmak için kullanılır.
+echo Sanal bellek dosyasının konumu ve boyutları aşağıdaki gibi ayarlanacaktır:
+echo Konum: C:\pagefile.sys
+echo Başlangıç Boyutu: 2048 MB
+echo Maksimum Boyut: 4096 MB
+
+set /p action=Devam etmek için 'E' tuşuna basın, tüm ayarları sıfırlamak için 'S' tuşuna basın, iptal etmek için 'H' tuşuna basın:
+
+if /i "%action%"=="E" (
+echo Ayarlar değiştiriliyor...
+
+REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v PagingFiles /t REG_MULTI_SZ /d "C:\pagefile.sys 2048 4096" /f
+
+echo Ayarlar başarıyla değiştirildi.
+) else if /i "%action%"=="S" (
+echo Tüm ayarlar sıfırlanıyor...
+
+REG DELETE "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management" /v PagingFiles /f
+
+echo Tüm ayarlar başarıyla sıfırlandı.
+) else if /i "%action%"=="H" (
+echo İşlem iptal edildi.
+) else (
+echo Geçersiz giriş. İşlem iptal edildi.
+)
+
+pause
+
+#bilişim #yazılım #yapayzeka #hapbilgi #bilgi #bilgisayar #ogretmen #sınıf #okul #instagram #bilişim #reels #hacker #love #aşk #istatistik

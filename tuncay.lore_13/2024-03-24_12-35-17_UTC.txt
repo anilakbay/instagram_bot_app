@@ -1,0 +1,13 @@
+Beğenerek Destek olabilirsiniz, Kodlar aşağıda 
+
+Selamlar bu komutlar kısaca iki klasörü devredışı bırakıyor. Kodların sonunda bulunan 
+/t REG_DWORD /d 0 /f alanını /t REG_DWORD /d 1 /f yaparsanız sisteminiz eski hale gelir.
+Eğer bilgisayar kullanmayı sadece instagramda ya da sosyal medyada gezme olarak biliyorsanız bu tarz komutlar sizin için geçerli ya da yararlı olmaz.
+
+Kodlar çalıştırmak için.
+Başlat
+CMD
+ve Aşağıdaki komutları oraya yapıştırın.
+
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters" /v EnablePrefetcher /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters" /v EnableSuperfetch /t REG_DWORD /d 0 /f

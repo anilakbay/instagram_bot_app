@@ -1,0 +1,5 @@
+Kod hem açıklamada hem de yorumda
+
+fsutil behavior set DisableDeleteNotify 0
+
+#bilişim #yazılım #yapayzeka #hapbilgi #bilgi #bilgisayar #ogretmen #sınıf #okul #instagram #bilişim #reels #hacker
